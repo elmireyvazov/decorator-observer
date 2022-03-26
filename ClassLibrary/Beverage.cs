@@ -8,36 +8,70 @@ namespace ClassLibrary
 {
     public abstract class Beverage
     {
-        protected string Description;
+        protected string description;
 
-        double milk = 0.3;
-        double soy = 0.4;
-        double mocha = 0.5;
-        double whip = 0.6;
+        protected int milk = 0;
+        protected int soy = 0;
+        protected int mocha = 0;
+        protected int whip = 0;
 
-        public string getDescription
+        public string Description
         {
-            get { return Description; }
+            get { return description + hasMilk() + hasSoy() + hasMocha() + hasWhip() + Cost() + "$"; }
         }
 
-        public double price { get; set; }
-        abstract public double Cost();
+        protected abstract double Cost();
 
-        public string setMilk()
+        public void setMilk()
         {
-            return $"{Description += "добавляем молоко"} : { price += milk}";
+            milk++;
         }
-        public string setSoy()
+        protected string hasMilk()
         {
-            return $"{Description += "добавляем сою"} ; {price += soy}";
+            if (milk > 0)
+            {
+                return "+ " + milk + " молоко ";
+            }
+            return "";
         }
-        public string setMocha()
+
+        public void setSoy()
         {
-            return $"{Description += "добавляем мокко"} : {price += mocha}";
+            soy++;
         }
-        public string setWhip()
+         protected string hasSoy()
         {
-            return $"{Description += "добавляем сливки"} : {price += whip}";
+            if (soy > 0)
+            {
+                return "+ " + soy + " соя ";
+            }
+            return "";
+        }
+
+        public void setMocha()
+        {
+            mocha++;
+        }
+        protected string hasMocha()
+        {
+            if (mocha > 0)
+            {
+                return "+ " + mocha + " моча ";
+            }
+            return "";
+        }
+
+        public void setWhip()
+        {
+            whip++;
+        }
+        protected string hasWhip()
+        {
+            if (whip > 0)
+            {
+                return "+ " + whip + " молоко ";
+            }
+            return "";
         }
     }
 }

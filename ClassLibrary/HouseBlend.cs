@@ -12,12 +12,12 @@ namespace ClassLibrary
     {
         public HouseBlend()
         {
-            Description = "houseblend";
-            price = 5.0;
+            description = "houseblend ";
         }
-        public override double Cost()
+
+        protected override double Cost()
         {
-            return price;
+            return (0.5 * milk) + (0.3 * soy) + (0.2 * mocha) + (0.6 * whip) + 4.99;
         }
     }
 }

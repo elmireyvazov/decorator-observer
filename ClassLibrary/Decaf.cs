@@ -10,12 +10,12 @@ namespace ClassLibrary
     {
         public Decaf()
         {
-            Description = "decaf";
-            price = 3.0;
+            description = "decaf ";
         }
-        public override double Cost()
+
+        protected override double Cost()
         {
-            return price;
+            return (0.5 * milk) + (0.3 * soy) + (0.2 * mocha) + (0.6 * whip) + 1.99;
         }
     }
 }

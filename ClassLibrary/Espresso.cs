@@ -10,12 +10,12 @@ namespace ClassLibrary
     {
         public Espresso()
         {
-            Description = "espresso";
-            price = 4.0;
+            description = "espresso ";
         }
-        public override double Cost()
+
+        protected override double Cost()
         {
-           return price;
+            return (0.5 * milk) + (0.3 * soy) + (0.2 * mocha) + (0.6 * whip) + 3.99;
         }
     }
 }

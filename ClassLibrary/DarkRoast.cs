@@ -10,12 +10,12 @@ namespace ClassLibrary
     {
         public DarkRoast()
         {
-            Description = "darkroast";
-            price = 2.0;
+            description = "darkroast ";
         }
-        public override double Cost()
+
+        protected override double Cost()
         {
-            return price;
+            return (0.5 * milk) + (0.3 * soy) + (0.2 * mocha) + (0.6 * whip) + 2.99;
         }
     }
 }

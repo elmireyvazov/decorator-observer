@@ -49,7 +49,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Pictures\1\ClassLibrary\ClassLibrary.csproj">
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
       <Project>{778e532b-0cfd-42f7-9cb0-6ba6349e33c1}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>
